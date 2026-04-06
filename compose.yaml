@@ -8,7 +8,7 @@ services:
         volumes:
           - /mnt/data/config:/config
           - /mnt/data/cache:/cache
-          - /mnt/data/VIdeo:/Movies:ro
-          - /mnt/storage/tvshows:/Shows:ro
+          - /mnt/data/VIdeo:/Movies
+          - /mnt/storage/tvshows:/Shows
         restart: 'unless-stopped'
     
