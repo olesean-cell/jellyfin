@@ -5,13 +5,13 @@ services:
     user: 1000:1000 # Use 'id' command to find your UID:GID
     network_mode: host # Recommended for DLNA and easier networking
     volumes:
-      - /path/to/config:/config
-      - /path/to/cache:/cache
+      - /mnt/data/config:/config
+      - /mnt/data/cache:/cache
       - /mnt/data/VIdeo:/Movies:ro
       - /mnt/storage/tvshows:/Shows:ro # ':ro' for read-only safety
     restart: unless-stopped
     environment:
-      - JELLYFIN_PublishedServerUrl=http://your-ip-address
+      - JELLYFIN_PublishedServerUrl=https://jellyfin.bradleyrogers.online
 
   # MariaDB (Optional: For other apps in your stack, not for Jellyfin core)
   mariadb:
