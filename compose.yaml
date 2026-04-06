@@ -7,7 +7,8 @@ services:
     volumes:
       - /path/to/config:/config
       - /path/to/cache:/cache
-      - /path/to/media:/media:ro # ':ro' for read-only safety
+      - /mnt/data/VIdeo:/Movies:ro
+      - /mnt/storage/tvshows:/Shows:ro # ':ro' for read-only safety
     restart: unless-stopped
     environment:
       - JELLYFIN_PublishedServerUrl=http://your-ip-address
