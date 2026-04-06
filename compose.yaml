@@ -2,8 +2,12 @@ services:
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: jellyfin
-    user: 1000:1000 # Use 'id' command to find your UID:GID
-    network_mode: host # Recommended for DLNA and easier networking
+    user: 1000:1000
+    ports:
+      - 8096:8096
+      - 8920:8920 # Optional HTTPS port
+      - 1900:1900/udp # Service Discovery
+      - 7359:7359/udp # Client Discovery
     volumes:
       - /mnt/data/config:/config
       - /mnt/data/cache:/cache
