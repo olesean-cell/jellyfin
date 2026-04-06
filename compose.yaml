@@ -23,5 +23,5 @@ services:
       - MYSQL_USER=example_user
       - MYSQL_PASSWORD=example_password
     volumes:
-      - /path/to/mysql_data:/var/lib/mysql
+      - /home/sean/Downloads/mysql_data:/var/lib/mysql
     restart: unless-stopped
