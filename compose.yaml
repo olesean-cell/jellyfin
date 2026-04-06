@@ -13,15 +13,3 @@ services:
     environment:
       - JELLYFIN_PublishedServerUrl=https://jellyfin.bradleyrogers.online
 
-  # MariaDB (Optional: For other apps in your stack, not for Jellyfin core)
-  mariadb:
-    image: mariadb:latest
-    container_name: mariadb
-    environment:
-      - MYSQL_ROOT_PASSWORD=your_secure_password
-      - MYSQL_DATABASE=example_db
-      - MYSQL_USER=example_user
-      - MYSQL_PASSWORD=example_password
-    volumes:
-      - /home/sean/Downloads/mysql_data:/var/lib/mysql
-    restart: unless-stopped
